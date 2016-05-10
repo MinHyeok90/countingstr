@@ -15,6 +15,11 @@
     <div class="well">
       <span style="font-weight:bold"><%= post.title %></span><br>
       <%= post.content %><br>
+      총 단어 수 : <%=post.content.split.length%><br>
+      총 글자 수 : 
+      [공백포함 : <%=post.content.length%>글자] | 
+      [공백미포함 : <%=post.content.gsub(/\s+/, "").length%>글자]
+      <br>
       <% post.replies.each do |reply| %>
         <%= reply.content %><br>
       <% end %>
