@@ -13,7 +13,7 @@ class HomeController < ApplicationController
   end
   
   def reply_write
-    new_reply = Reply.new(content: params[:content],post_id: params[:post_id])
+    new_reply = Reply.new(content: params[:content],post_id: params[:id_of_post])
     new_reply.save
     redirect_to :back
   end
